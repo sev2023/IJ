@@ -7,23 +7,22 @@ public class Main {
         //System.out.println("Hello world!");
         //AWT myAwt = new AWT();
 
-        // Swing JFrame setup
-        JFrame myJF = new JFrame();
+        JFrame gridJFrame = new JFrame("This is Title");
+        gridJFrame.setSize(400, 500);
+        gridJFrame.setDefaultCloseOperation(3);
+        gridJFrame.setVisible(true);
+        gridJFrame.setLayout(new GridLayout(6,4));
+        // getContentPane() is Frame's graphical layer
+        gridJFrame.getContentPane().setBackground(new Color(136, 169, 193));
 
-        myJF.setSize(400,500);
-        myJF.setDefaultCloseOperation(3);
-        myJF.setLayout(null);
-        myJF.setResizable(false);
-        myJF.setVisible(true);
-        myJF.getContentPane().setBackground(new Color(107, 134, 151));
+        JLabel JLdisplay = new JLabel(".....0");
+        JLdisplay.setOpaque(true);
+        JLdisplay.setBackground(new Color(194, 208, 222));
 
-        // Label to hold calc display
-        JLabel JLdisplay = new JLabel("...0");
-        JLdisplay.setBounds(50,20,300,30);
-        //JLdisplay.setOpaque(true);
-        JLdisplay.setBackground(new Color(177, 188, 173));
+        gridJFrame.add(JLdisplay); // this is really added to getContentPane()
 
-        // Add components to Frame
-        myJF.add(JLdisplay);
+
+
+
     }
 }
