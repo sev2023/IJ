@@ -9,10 +9,14 @@ public class Main {
 
         JFrame calcFrame = new JFrame("This is Title");
 
-        JLabel display = new JLabel("....0");
+        JLabel display = new JLabel(" 0 ",4);
         display.setBounds(20,10,245,40);
         display.setOpaque(true);
         display.setBackground(new Color(189, 210, 231));
+        display.setFont(new Font("Arial", Font.BOLD, 18));
+        //display.setBorder(BorderFactory.createLineBorder(new Color(189, 210, 231), 10));
+        display.setBorder(BorderFactory.createBevelBorder(1));
+
 
         JButton btn7 = new JButton("7");
         btn7.setBounds(20,60,bntW,bntH);
@@ -66,7 +70,7 @@ public class Main {
         // -----------------------------------------
         JButton btnEqual = new JButton("Equal");
         btnEqual.setBounds(20,240,bntW*3+6,bntH);
-        btnEqual.setBackground(new Color(0, 113, 0));
+        btnEqual.setBackground(new Color(16, 124, 16));
         btnEqual.setForeground(SystemColor.white);
 
         JButton btnMinus = new JButton("-");
