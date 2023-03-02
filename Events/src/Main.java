@@ -1,8 +1,33 @@
 import java.awt.*;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
+
+        class IListener implements ItemListener{
+            @Override
+            public void itemStageChanged(ItemEvent e){
+                boolean btnSelected = e.getStateChange() == ItemEvent.SELECTED;
+
+                // cast selected button to "ansBtn"
+                AbstractButton absBtn = (AbstractButton)  e.getItemSelectable();
+
+                // cast event action to "lang"
+                String lang = absBtn.getActionCommand();
+
+                String state;
+                if(btnSelected) state = "selected";
+                else state = "unselected";
+                String msg = lang + " option was " + state;
+
+                //Show message dialog
+                // JOptionPane.showMessageDialog(msg)
+
+            }
+        }
+
 
         JFrame myJF = new JFrame();
         JLabel myJL = new JLabel("THis is my labela");
@@ -13,7 +38,6 @@ public class Main {
 
 
         //---------- ADD COMPONENTS
-
         myJF.add(myJL);
         myJF.add(myJBtnStart);
 
