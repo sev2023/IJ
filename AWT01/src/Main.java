@@ -4,7 +4,6 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args)
     {
-
         int bntW = 58;
         int bntH = 40;
 
