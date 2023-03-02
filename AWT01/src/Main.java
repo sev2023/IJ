@@ -1,31 +1,54 @@
 import java.awt.*; // Swing needs this!
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 
 public class Main {
     public static void main(String[] args)
     {
+
         int bntW = 58;
         int bntH = 40;
 
         JFrame calcFrame = new JFrame("This is Title");
 
-        JLabel display = new JLabel(" 0 ",4);
+        JLabel display = new JLabel("",4); // '4' for Right text alignment
         display.setBounds(20,10,245,40);
         display.setOpaque(true);
         display.setBackground(new Color(189, 210, 231));
         display.setFont(new Font("Arial", Font.BOLD, 18));
-        //display.setBorder(BorderFactory.createLineBorder(new Color(189, 210, 231), 10));
-        display.setBorder(BorderFactory.createBevelBorder(1));
+
+        //display.setBorder(BorderFactory.createBevelBorder(1));
+        display.setBorder(new EmptyBorder(0,0,0,10));
 
 
         JButton btn7 = new JButton("7");
         btn7.setBounds(20,60,bntW,bntH);
+        btn7.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                display.setText(display.getText() + "7");
+            }
+        });
 
         JButton btn8 = new JButton("8");
         btn8.setBounds(82,60,bntW,bntH);
+        btn8.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                display.setText(display.getText() + "8");
+            }
+        });
 
         JButton btn9 = new JButton("9");
         btn9.setBounds(144,60,bntW,bntH);
+        btn9.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                display.setText(display.getText() + "9");
+            }
+        });
 
         JButton btnC = new JButton("C");
         btnC.setBounds(206,60,bntW,bntH);
@@ -34,36 +57,92 @@ public class Main {
         // -----------------------------------------
         JButton btn4 = new JButton("4");
         btn4.setBounds(20,105,bntW,bntH);
+        btn4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                display.setText(display.getText() + "4");
+            }
+        });
 
         JButton btn5 = new JButton("5");
         btn5.setBounds(82,105,bntW,bntH);
+        btn5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                display.setText(display.getText() + "5");
+            }
+        });
 
         JButton btn6 = new JButton("6");
         btn6.setBounds(144,105,bntW,bntH);
+        btn6.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                display.setText(display.getText() + "6");
+            }
+        });
 
         JButton btnDivide = new JButton("/");
         btnDivide.setBounds(206,105,bntW,bntH);
         // -----------------------------------------
         JButton btn1 = new JButton("1");
         btn1.setBounds(20,150,bntW,bntH);
+        btn1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                display.setText(display.getText() + "1");
+            }
+        });
 
         JButton btn2 = new JButton("2");
         btn2.setBounds(82,150,bntW,bntH);
+        btn2.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            display.setText(display.getText() + "2");
+        }
+    });
 
         JButton btn3 = new JButton("3");
         btn3.setBounds(144,150,bntW,bntH);
+        btn3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                display.setText(display.getText() + "3");
+            }
+        });
 
         JButton btnMiltiply = new JButton("*");
         btnMiltiply.setBounds(206,150,bntW,bntH);
         // -----------------------------------------
         JButton btn0 = new JButton("0");
         btn0.setBounds(20,195,bntW,bntH);
+        btn0.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                display.setText(display.getText() + "0");
+            }
+        });
 
         JButton btn00 = new JButton("00");
         btn00.setBounds(82,195,bntW,bntH);
+        btn00.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                display.setText(display.getText() + "00");
+            }
+        });
 
         JButton btnDot = new JButton(".");
         btnDot.setBounds(144,195,bntW,bntH);
+        btnDot.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(display.getText().indexOf('.') < 0){
+                    display.setText(display.getText() + ".");
+                }
+            }
+        });
 
         JButton btnPlus = new JButton("+");
         btnPlus.setBounds(206,195,bntW,bntH);
@@ -107,6 +186,9 @@ public class Main {
         calcFrame.setResizable(false);
         calcFrame.setLayout(null);
         calcFrame.setVisible(true);
+
+//        display.setText("lkjlkj");
+//        String sss = display.getText();
 
     }
 }
