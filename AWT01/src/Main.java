@@ -5,11 +5,18 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
 public class Main {
+
+    // math variable
+    public int num1;
+    public int ans;
+    public int count = 0;
+
     public static void main(String[] args)
     {
-
+        // buttons size
         int bntW = 58;
         int bntH = 40;
+
 
         JFrame calcFrame = new JFrame("This is Title");
 
@@ -54,6 +61,12 @@ public class Main {
         btnC.setBounds(206,60,bntW,bntH);
         btnC.setBackground(SystemColor.red);
         btnC.setForeground(SystemColor.white);
+        btnC.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                display.setText("");
+            }
+        });
         // -----------------------------------------
         JButton btn4 = new JButton("4");
         btn4.setBounds(20,105,bntW,bntH);
@@ -84,7 +97,7 @@ public class Main {
 
         JButton btnDivide = new JButton("/");
         btnDivide.setBounds(206,105,bntW,bntH);
-        // -----------------------------------------
+        // -----------------------------------------------
         JButton btn1 = new JButton("1");
         btn1.setBounds(20,150,bntW,bntH);
         btn1.addActionListener(new ActionListener() {
@@ -114,7 +127,7 @@ public class Main {
 
         JButton btnMiltiply = new JButton("*");
         btnMiltiply.setBounds(206,150,bntW,bntH);
-        // -----------------------------------------
+        // -----------------------------------------------
         JButton btn0 = new JButton("0");
         btn0.setBounds(20,195,bntW,bntH);
         btn0.addActionListener(new ActionListener() {
@@ -146,7 +159,7 @@ public class Main {
 
         JButton btnPlus = new JButton("+");
         btnPlus.setBounds(206,195,bntW,bntH);
-        // -----------------------------------------
+        // -----------------------------------------------
         JButton btnEqual = new JButton("Equal");
         btnEqual.setBounds(20,240,bntW*3+6,bntH);
         btnEqual.setBackground(new Color(16, 124, 16));
