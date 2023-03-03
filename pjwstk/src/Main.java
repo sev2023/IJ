@@ -1,23 +1,27 @@
 import javax.swing.*;
 import java.awt.*;
-// simplest JForm creation ever
-// 'show()' do MAGIC
-public class Main extends JFrame{
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-    Main(){
-        add(new JButton("1"));
-        add(new JButton("1"));
-        add(new JButton("1"));
-        add(new JButton("1"));
-        add(new JButton("1"));
-        add(new JButton("1"));
-        setSize(300,300);
-        setLayout(new GridLayout());
-        show();
-
+public class Main extends JFrame implements ActionListener{
+    static String myText = "";
+    @Override
+    public void actionPerformed(ActionEvent e){
+        myText = "ACTION!!!";
     }
+
+    static String s1 = "";
+    Main(){
+        s1 = "doMain";
+    }
+
     public static void main(String[] args){
-        new Main();
+        var f = new Main();
+
+        var btn1 = new JButton(s1);
+        f.add(btn1);
+        f.setSize(300,300);
+        f.setVisible(true);
     }
 }
 
