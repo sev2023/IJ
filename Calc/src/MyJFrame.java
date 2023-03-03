@@ -13,7 +13,9 @@ public class MyJFrame extends JFrame {
         setVisible(true);
 
         var lb1 = new JLabel("abcde");
+        var lb2 = new JLabel("ABCDE");
         add(lb1);
+        add(lb2);
 
         add(new JButton("1"));
         add(new JButton("2"));
@@ -21,9 +23,10 @@ public class MyJFrame extends JFrame {
         btn3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                lb1.setText("333");
+                lb1.setText(e.toString());
             }
         });
+
         add(btn3);
     }
 }
