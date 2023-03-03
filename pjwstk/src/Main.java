@@ -4,24 +4,24 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Main extends JFrame implements ActionListener{
-    static String myText = "";
     @Override
     public void actionPerformed(ActionEvent e){
-        myText = "ACTION!!!";
+        form.setSize(200,200);
     }
 
-    static String s1 = "";
-    Main(){
-        s1 = "doMain";
-    }
+    // this is static accessible from everywhere
+    static JFrame form;
+    static JTextField display;
+    public static void main(String[] args)
+    {
+        Main m = new Main(); // made only to access ActionListener
+        form = new JFrame("Main"); // this is static already declared
 
-    public static void main(String[] args){
-        var f = new Main();
-
-        var btn1 = new JButton(s1);
-        f.add(btn1);
-        f.setSize(300,300);
-        f.setVisible(true);
+        var btn1 = new JButton("1");
+        btn1.addActionListener(m);
+        form.add(btn1);
+        form.setSize(300,300);
+        form.setVisible(true);
     }
 }
 
