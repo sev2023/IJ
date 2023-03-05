@@ -11,31 +11,20 @@ public class Main extends JFrame{
         display.setHorizontalAlignment(SwingConstants.RIGHT);
         form.add(display);
 
-
         // ARRAY!
-        JButton[] btns = new JButton[10];
-        for(int i=0; i<10; i++) {
-            btns[i] = new JButton(Integer.toString(i));
+        String[] btnsTxt = {"1", "2", "3", "4", "5", "6", "7", "8",
+                "9", "0", ".", "+", "-", "*", "/", "C", "Equal", "END"};
+
+        JButton[] btns = new JButton[20];
+        for(int i=0; i<17; i++) {
+            btns[i] = new JButton(btnsTxt[i]);
+            btns[i].addActionListener(new Action());
             form.add(btns[i]);
         }
-
-        var btnDot = new JButton(".");
-        var btnC = new JButton("C");
-        var btnPlus = new JButton("+");
-        var btnEqual = new JButton("Equal");
-
-
-
-        form.add(btnDot);
-        form.add(btnC);
-        form.add(btnPlus);
-        form.add(btnEqual);
 
         form.setSize(300,200);
         form.setLayout(new FlowLayout());
         form.setVisible(true);
-
-
     }
 }
 
