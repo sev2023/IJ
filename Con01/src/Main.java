@@ -31,15 +31,21 @@ public class Main {
 //        String userInpE = new Scanner(System.in).nextLine();
 //        String sArray[] = userInpE.split(" ");
 //        for(int i=0; i < (sArray.length - 1); i++){
-//            if(Double.parseDouble(sArray[i]) > Double.parseDouble(sArray[i+1])) boo = "not ";
+//            if(Double.parseDouble(sArray[i]) > Double.parseDouble(sArray[i+1])) {
+//            boo = "not ";
+//            break;
+//            }
 //        }
 //        System.out.print("Your numbers are " + boo +"sorted.");
 // ---------------------------------------------------  NEIGHBOURS LETTERS
 //          String boo = "";
-//          System.out.print("Enter few letters in alphabethical order: ");
+//          System.out.print("Enter few letters in alphabetical order: ");
 //          String userInpF = new Scanner(System.in).nextLine();
 //          for(int i=0; i < (userInpF.length() - 1); i++){
-//              if(((int)userInpF.charAt(i+1) - (int)userInpF.charAt(i)) != 1)  boo = "not ";
+//              if(((int)userInpF.charAt(i+1) - (int)userInpF.charAt(i)) != 1)  {
+//              boo = "not ";
+//              break;
+//              }
 //          }
 //          System.out.print("Your letters are " + boo +"in order.");
 
