@@ -56,7 +56,7 @@ public class Action implements ActionListener {
                 oper = " = ";
                 break;
             default:
-                if(oper.equals("= ")){
+                if(oper.equals(" = ")){
                     s1 = "";
                     oper = "";
                 }
