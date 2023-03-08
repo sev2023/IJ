@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String boo = "";
+        String boo = "not ";
         int iYr = 0;
         System.out.print("Enter year: ");
         try{
@@ -20,7 +20,7 @@ public class Main {
             System.exit(0);
         }
 
-        if(iYr % 4 != 0 || ((iYr % 400 != 0) && (iYr % 100 == 0))) boo = "not ";
+        if(iYr % 400 == 0 || (iYr % 4 == 0) && (iYr % 100 != 0)) boo = "";
         System.out.print("Year " + iYr + " is " + boo + "a leap year." );
     }
 }
