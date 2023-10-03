@@ -1,11 +1,8 @@
-//import
+import java.io.IOException;
+import java.util.*;
 public class Main {
-    public static void main(String[] args) {
-        char c = 'a';
-        System.out.println("Short = " + c);
-        double i = 2;
-        System.out.println("Short PLus = " + i);
-        i = c;
-        System.out.println("Short PLus = " + i);
+    public static void main(String[] args) throws IOException {
+
+
     }
 }
